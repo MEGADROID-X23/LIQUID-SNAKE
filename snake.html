@@ -30,6 +30,31 @@
         </div>
     </div>
 
+    <script>
+        function playMusicOnEnterKeyPress() {
+          const music = new Audio("Number Comparison Gaming_CBR_256k.mp3");
+          music.loop = true;
+          let isMusicPlaying = false;
+       
+          function toggleMusic() {
+            if (!isMusicPlaying) {
+              music.play();
+              isMusicPlaying = true;
+            } else {
+              music.pause();
+              isMusicPlaying = false;
+            }
+          }
+      
+          document.addEventListener("keydown", (event) => {
+            if (event.key === "Enter") {
+              toggleMusic();
+            }
+          });
+        }
+      
+        window.addEventListener("load", playMusicOnEnterKeyPress);
+      </script>
 
 
 
