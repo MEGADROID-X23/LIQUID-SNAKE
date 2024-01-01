@@ -32,6 +32,38 @@ body{
     color: greenyellow;
     text-decoration: underline solid #e3f2fd;
 }
+.LS1 a{
+    color: greenyellow;
+    text-decoration: none;
+    position: relative;
+    text-align: center;
+    display: block;
+}
+.LS1 a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: white; /* Change this to your desired color */
+    opacity: 0;
+    animation: underlineFlash 1s infinite alternate; /* Adjust timing as needed */
+  }
+
+  @keyframes underlineFlash {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  .LS1 a:hover::after {
+    opacity: 1;
+    animation: underlineFlash 0.5s infinite alternate; /* Adjust timing as needed */
+  }
 .play-board{
     width: 100%;
     height: 100%;
