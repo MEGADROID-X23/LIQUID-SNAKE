@@ -28,13 +28,13 @@ body{
     display: flex;
     justify-content: space-between;
 }
-.game-details .LS{
+.game-details .LS a{
     color: greenyellow;
     text-decoration: underline solid #e3f2fd;
 }
 .LS1 a{
     color: greenyellow;
-    text-decoration: none;
+    text-decoration: underline solid #e3f2fd;
     position: relative;
     text-align: center;
     display: block;
@@ -48,7 +48,7 @@ body{
     height: 2px;
     background-color: white; /* Change this to your desired color */
     opacity: 0;
-    animation: underlineFlash 1s infinite alternate; /* Adjust timing as needed */
+    /* animation: underlineFlash 1s infinite alternate; Adjust timing as needed */
   }
 
   @keyframes underlineFlash {
